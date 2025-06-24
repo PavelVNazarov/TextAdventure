@@ -1,5 +1,4 @@
 <!--index.html-->
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -22,19 +21,14 @@
     </style>
 </head>
 <body>
-    <img src="{{ url_for('static', filename='logo.png') }}" alt="Изображение">
+    <img src="static/logo.png" alt="Изображение">
     <h1>Выберите книгу</h1>
 
-    {% if books %}
-        <ul>
-        {% for book in books %}
-            <li><a href="{{ url_for('book', filename=book) }}">{{ book }}</a></li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>Нет доступных книг.</p>
-    {% endif %}
+    <ul>
+        <li><a href="book1.html">Загадка леса</a></li>
+        <li><a href="book2.html">Пробная книга</a></li>
+    </ul>
 
-    <a href="{{ url_for('about') }}">Описание программы</a>
+    <a href="about.html">Описание программы</a>
 </body>
 </html>
