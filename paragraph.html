@@ -3,7 +3,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>{{ book['metadata']['title'] }}</title>
+    <title>Загадка леса</title>
     <style>
         body {
             display: flex;
@@ -21,25 +21,21 @@
     </style>
 </head>
 <body>
-    <h1>{{ book['metadata']['title'] }}</h1>
-    <h2>Параграф {{ paragraph['number'] }}</h2>
-    <p>{{ paragraph['text'] }}</p>
+    <h1>Загадка леса</h1>
+    <h2>Параграф 2</h2>
+    <p>Вы углубляетесь в лес. Вдруг перед Вами появляется старый мудрец.</p>
 
-    {% if paragraph['image_path'] %}
-        <img src="{{ url_for('static', filename=paragraph['image_path']) }}" alt="Изображение">
-    {% endif %}
+    <img src="static/mudrets.png" alt="Изображение">
 
-    {% if paragraph['options'] %}
-        <h3>Выберите действие:</h3>
-        <ul>
-        {% for option in paragraph['options'] %}
-            <li><a href="{{ url_for('paragraph', filename=request.view_args['filename'], paragraph_number=option['target']) }}">{{ option['text'] }}</a></li>
-        {% endfor %}
-        </ul>
-    {% endif %}
+    <h3>Выберите действие:</h3>
+    <ul>
+        <li><a href="paragraph4.html">Спросить о пути</a></li>
+        <li><a href="paragraph5.html">Игнорировать и идти дальше</a></li>
+    </ul>
 
-    <a href="{{ url_for('index') }}">На главную</a>
+    <a href="index.html">На главную</a>
 </body>
 </html>
+
 
 
