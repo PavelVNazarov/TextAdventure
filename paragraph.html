@@ -1,0 +1,45 @@
+<!--paragraph.html-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ book['metadata']['title'] }}</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            margin: 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ book['metadata']['title'] }}</h1>
+    <h2>Параграф {{ paragraph['number'] }}</h2>
+    <p>{{ paragraph['text'] }}</p>
+
+    {% if paragraph['image_path'] %}
+        <img src="{{ url_for('static', filename=paragraph['image_path']) }}" alt="Изображение">
+    {% endif %}
+
+    {% if paragraph['options'] %}
+        <h3>Выберите действие:</h3>
+        <ul>
+        {% for option in paragraph['options'] %}
+            <li><a href="{{ url_for('paragraph', filename=request.view_args['filename'], paragraph_number=option['target']) }}">{{ option['text'] }}</a></li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+
+    <a href="{{ url_for('index') }}">На главную</a>
+</body>
+</html>
+
+
