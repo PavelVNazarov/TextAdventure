@@ -1,0 +1,158 @@
+﻿{
+  "metadata": {
+    "title": "Пробная книга",
+    "description": "Тестовая книга для отладки",
+    "image": "images/adventure_books2.png"
+  },
+  "paragraphs": [
+    {
+      "number": 1,
+      "text": "Здесь начинаются Ваши приключения",
+      "image_path": "adventure_books2.png",
+      "options": [
+        {"text": "Пролог", "target": 2},
+        {"text": "Идти дальше", "target": 3}
+      ]
+    },
+    {
+      "number": 2,
+      "text": "Пролог. Описание завязки истории создание интриги.",
+      "options": [
+        {"text": "Дальше", "target": 3}
+      ]
+    },
+    {
+      "number": 3,
+      "image_path": "adventure_books2.png",
+      "text": "А вот здесь уже реально первые шаги.",
+      "options": [
+        {"text": "Вперед", "target": 4}
+      ],
+      "player_stats": {
+        "agility": 5,
+        "strength": 10,
+        "charm": 7,
+        "luck": 5
+      }
+    },
+    {
+      "number": 4,
+      "text": "А вот здесь уже приключения.",
+      "options": [
+        {"text": "Сражаться с муравьями", "target": 5},
+        {"text": "Убежать", "target": 6}
+      ],
+      "inventory": ["Меч"]
+    },
+    {
+      "number": 5,
+      "text": "Выбор пути.",
+      "options": [
+        {"text": "на право", "target": 7},
+        {"text": "на лево", "target": 8}
+      ],
+      "inventory": ["Еда"]
+    },
+    {
+      "number": 6,
+      "text": "А вот здесь.",
+      "options": [
+        {"text": "В право", "target": 9},
+        {"text": "В лево", "target": 10}
+      ],
+      "modify_stats": {
+        "strength": -2
+      }
+    },
+  {
+    "number": 7,
+    "text": "здесь уже реально.",
+    "options": [
+      {"text": "поднять", "target": 11}
+    ]
+  },
+  {
+    "number": 8,
+    "text": "А вот здесь...",
+    "options": [
+      {"text": "Убежать", "target": 12}
+    ]
+  },
+  {
+    "number": 9,
+    "text": "А вот шаги.",
+    "options": [
+      {"text": "Сражаться", "target": 13}
+    ]
+  },
+  {
+    "number": 10,
+    "text": "А вот шаги.",
+    "options": [
+      {"text": "Сражаться", "target": 13}
+    ]
+  },
+  {
+    "number": 11,
+    "text": "Победа!",
+    "options": [
+      {"text": "Начать с начала", "target": 1}
+    ]
+  },
+  {
+    "number": 12,
+    "text": "Бесславный конец",
+    "options": [
+      {"text": "С начала", "target": 1}
+    ]
+  },
+  {
+    "number": 13,
+    "text": "А вот шаги.",
+    "options": [
+      {"text": "Прятаться", "target": 14}, 
+      {"text": "Сражаться", "target": 15}
+    ]
+  },
+  {
+    "number": 14,
+    "text": "А вот шаги.",
+    "options": [
+      {"text": "Прятаться", "target": 16}, 
+      {"text": "Сражаться", "target": 11}
+    ]
+  },
+  {
+    "number": 15,
+    "text": "А вот шаги.",
+    "options": [
+      {"text": "Прятаться", "target": 17},
+      {"text": "Сражаться", "target": 16}
+    ]
+  },
+  {
+    "number": 16,
+    "text": "А вот...",
+    "options": [
+      {"text": "Стараться", "target": 4}
+    ]
+  },
+  {
+    "number": 17,
+    "text": "Вы бредете берегом. Внезапно слышится странный цокот и скрежет...",
+    "options": [
+      {"text": "Сражаться с муравьями", "target": 999}
+    ]
+  },
+  {
+    "number": 980,
+    "text": "Пролог",
+    "options": [
+     {"text": "дальше", "target": 1}]
+  },
+  {
+    "number": 999,
+    "text": "Конец"
+  }
+]
+}

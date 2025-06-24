@@ -1,0 +1,10 @@
+Шаблон простых текстовых квестов
+
+├── app.py
+├── templates/
+│   ├── index.html
+│   ├── book.html
+│   └── paragraph.html
+└── data/
+    ├── adventure1.json
+    └── adventure2.json
